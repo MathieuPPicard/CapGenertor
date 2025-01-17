@@ -6,8 +6,8 @@ import sys
 OK = 2  #number of OK image cap
 NOK = 100   #number of NOK image cap
 COLOR = ["#FF0000","#0000FF","#00FF00"] #Choice of colors
-OK_PATH = f'ButtonGenerator/OK' #Your folder path for the OK image
-NOK_PATH = f'ButtonGenerator/NOK'   #Your folder path for the NOK image
+OK_PATH = f'CapGenerator/OK' #Your folder path for the OK image
+NOK_PATH = f'CapGenerator/NOK'   #Your folder path for the NOK image
 
 P_COLOR = np.floor(NOK/4)  #sub number of NOK image (color problem)
 P_COLOR_PATH = NOK_PATH + '/P_COLOR'
