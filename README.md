@@ -13,19 +13,33 @@ The program generate folder inside of the parent one if you dont change the path
 ![Exemple cap 2](EXEMPLE/Exemple_image_1.png)
 
 ## Not valid caps (NOK)
+
 The following section have exemples of not valid caps.
+
 ### Color problem
+
 This cap has extra color.
+
 ![Exemple NOK color ](EXEMPLE/NOkColor_image_0.png)
+
 ### Curve problem
+
 This cap left curve is too large.
+
 ![Exemple NOK curve ](EXEMPLE/NOkCurve_image_0.png)
+
 ### Matter problem
+
 This cap is missing some material.
+
 ![Exemple NOK matter ](EXEMPLE/NOkMatter_image_0.png)
+
 ### Size problem
+
 This cap is too big.
+
 ![Exemple NOK size ](EXEMPLE/NOkSize_image_0.png)
+
 ## Usage
 
 At the top of the file you can change some constant to fit your needs.
