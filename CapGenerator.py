@@ -2,13 +2,14 @@ import matplotlib.pyplot as plt
 import matplotlib.colors as mcolors
 import numpy as np
 import sys
+import os
 
-GENERATE_IMAGE = False   #If true will generate image, if false will only show the plot
+GENERATE_IMAGE = True   #If true will generate image, if false will only show the plot
 OK = 2  #number of OK image cap
 NOK = 4   #number of NOK image cap
 COLOR = ["#FF0000","#0000FF","#00FF00"] #Choice of colors
-OK_PATH = f'../CapGenerator/OK' #Your folder path for the OK image
-NOK_PATH = f'../CapGenerator/NOK'   #Your folder path for the NOK image
+OK_PATH = 'OK' #Your folder path for the OK image
+NOK_PATH = 'NOK'   #Your folder path for the NOK image
 
 P_COLOR = np.int8(np.ceil(NOK/4))  #sub number of NOK image (color problem)
 P_COLOR_PATH = NOK_PATH + '/P_COLOR'
@@ -265,11 +266,27 @@ def createImage(array, ok, num, type) :
                 plt.savefig(f'{P_MATTER_PATH}/NOk_image_{num}.png',bbox_inches='tight',pad_inches=0)
             if type == "P_SIZE" :
                 #plt.show()
+                
                 plt.savefig(f'{P_SIZE_PATH}/NOk_image_{num}.png',bbox_inches='tight',pad_inches=0)
         elif GENERATE_IMAGE == False :
             plt.show()
 
 def main() :
+    if not os.path.exists(OK_PATH) :
+        os.makedirs(OK_PATH)
+
+    if not os.path.exists(P_COLOR_PATH) :
+        os.makedirs(P_COLOR_PATH)
+
+    if not os.path.exists(P_CURVE_PATH) :
+        os.makedirs(P_CURVE_PATH)
+
+    if not os.path.exists(P_MATTER_PATH) :
+        os.makedirs(P_MATTER_PATH)
+
+    if not os.path.exists(P_SIZE_PATH) :
+        os.makedirs(P_SIZE_PATH)
+    
     #Create the ok images
     for i in range(OK):
         okArray = createOkCap(17, 17)
