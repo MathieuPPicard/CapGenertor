@@ -245,6 +245,9 @@ def createImage(array, ok, num, type) :
     
     colors = ['white', rndColor, rndColor2]
     cmap = mcolors.ListedColormap(colors)
+
+    plt.figure(figsize=(1.7,1.7), dpi=10)
+    plt.gca().set_position([0, 0, 1, 1])
     plt.axis('off')
     plt.imshow(array, cmap=cmap, interpolation='nearest')
     #Indicate how to name and where to save the image
