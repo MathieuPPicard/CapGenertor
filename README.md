@@ -58,3 +58,11 @@ NOK_PATH = f'CapGenerator/NOK'
 - COLOR : Choice of colors
 - OK_PATH : Your folder path for the OK image
 - NOK_PATH : Your folder path for the NOK image
+
+or
+
+When calling the main method give the following parametters.
+
+```
+main(generateImage, ok, nok, color)
+```
